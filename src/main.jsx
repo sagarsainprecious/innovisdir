@@ -6,9 +6,6 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import Navbar from './components/Header/Header.jsx';
-import ServicePage from './pages/ServicePage.jsx';
-import AdminRoot from './components/AdminPannel/components/AdminRoot.jsx';
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
 

@@ -29,22 +29,22 @@ import {
 } from "../../context/LayoutContext";
 
 const structure = [
-  { id: 0, label: "Dashboard", link: "/app/dashboard", icon: <HomeIcon /> },
+  { id: 0, label: "Dashboard", link: "/admin", icon: <HomeIcon /> },
 
   {
     id: 1,
     label: "Landing Page",
-    link: "/app/ui",
+    link: "/landingpage",
     children: [
-      { label: "Header", link: "/app/ui/icons" },
-      { label: "Hero Section", link: "/app/ui/charts" },
-      { label: "Statistics", link: "/app/ui/maps" },
-      { label: "Services", link: "/app/ui/maps" },
-      { label: "Testimonials", link: "/app/ui/maps" },
-      { label: "Team Section", link: "/app/ui/maps" },
-      { label: "Locations", link: "/app/ui/maps" },
-      { label: "Footer", link: "/app/ui/maps" },
-      { label: "Copyright Text", link: "/app/ui/maps" },
+      { label: "Header", link: "/landingpage/header" },
+      { label: "Hero Section", link: "/landingpage/herosection" },
+      { label: "Statistics", link: "/landingpage/statistics" },
+      { label: "Services", link: "/landingpage/services" },
+      { label: "Testimonials", link: "/landingpage/testimonials" },
+      { label: "Team Section", link: "/landingpage/teams" },
+      { label: "Locations", link: "/landingpage/locations" },
+      { label: "Footer", link: "/landingpage/footer" },
+      { label: "Copyright Text", link: "/landingpage/copyrighttext" },
     ],
   },
   {

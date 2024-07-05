@@ -1,13 +1,9 @@
 import React from "react";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 // components
-import Layout from "./Layout/Layout";
 
 // pages
-import Error from "../pages/error/Error";
-import Login from "../pages/login/Login";
-import Header from "../../Header/Header";
 
 // context
 
@@ -35,44 +31,44 @@ export default function AdminRoot() {
 
   // #######################################################################
 
-  function PrivateRoute({ component, ...rest }) {
-    return (
-      <Route
-        {...rest}
-        render={props =>
-          isAuthenticated ? (
-            React.createElement(component, props)
-          ) : (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: {
-                  from: props.location,
-                },
-              }}
-            />
-          )
-        }
-      />
-    );
-  }
+  // function PrivateRoute({ component, ...rest }) {
+  //   return (
+  //     <Route
+  //       {...rest}
+  //       render={props =>
+  //         isAuthenticated ? (
+  //           React.createElement(component, props)
+  //         ) : (
+  //           <Redirect
+  //             to={{
+  //               pathname: "/login",
+  //               state: {
+  //                 from: props.location,
+  //               },
+  //             }}
+  //           />
+  //         )
+  //       }
+  //     />
+  //   );
+  // }
 
-  function PublicRoute({ component, ...rest }) {
-    return (
-      <Route
-        {...rest}
-        render={props =>
-          isAuthenticated ? (
-            <Redirect
-              to={{
-                pathname: "/",
-              }}
-            />
-          ) : (
-            React.createElement(component, props)
-          )
-        }
-      />
-    );
-  }
+//   function PublicRoute({ component, ...rest }) {
+//     return (
+//       <Route
+//         {...rest}
+//         render={props =>
+//           isAuthenticated ? (
+//             <Redirect
+//               to={{
+//                 pathname: "/",
+//               }}
+//             />
+//           ) : (
+//             React.createElement(component, props)
+//           )
+//         }
+//       />
+//     );
+//   }
 }

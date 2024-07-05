@@ -25,7 +25,6 @@ import useStyles from "./styles";
 
 // components
 import { Typography } from "../Wrappers/Wrappers";
-import Notification from "../Notification/Notification";
 import UserAvatar from "../UserAvatar/UserAvatar";
 
 // context
@@ -211,15 +210,7 @@ export default function Header(props) {
           className={classes.headerMenu}
           disableAutoFocusItem
         >
-          {notifications.map((notification) => (
-            <MenuItem
-              key={notification.id}
-              onClick={() => setNotificationsMenu(null)}
-              className={classes.headerMenuItem}
-            >
-              <Notification {...notification} typographyVariant="inherit" />
-            </MenuItem>
-          ))}
+
         </Menu>
         <Menu
           id="profile-menu"
